@@ -7,6 +7,7 @@ import openpyxl
 import tkinter as tk
 from tkinter import filedialog
 import sheettable
+import notepad
 import re
 
 def string_conv2_number(number_string):
@@ -87,6 +88,10 @@ def getExcel():
 def main():
     app = sheettable.SheetTable()
     app.mainloop()
+
+    notepad = notepad.Notepad(width=600, height=400)
+    notepad.run()
+
     root = tk.Tk()
     canvas1 = tk.Canvas(root, width=300, height=300, bg='lightsteelblue')
     canvas1.pack()
